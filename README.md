@@ -1,1 +1,3 @@
-# SportsTracker
+# Project Proposal
+## SportsTracker
+
