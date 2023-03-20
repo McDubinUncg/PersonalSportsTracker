@@ -1,0 +1,67 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.w3-bar-item {
+    float: right;
+    width: 20%;
+}
+
+.w3-bar-item a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.w3-bar-item a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.w3-bar-item a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.w3-display-container {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.w3-display-bottommiddle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.w3-content {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-dots li button:before {
+    color: black;
+}
