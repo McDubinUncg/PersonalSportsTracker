@@ -65,3 +65,7 @@ img {
 .slick-dots li button:before {
     color: black;
 }
+body {
+    background-color: #333;
+  }
+  
