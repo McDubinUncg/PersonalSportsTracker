@@ -67,8 +67,10 @@ img {
 }
 
 body {
-    color: white;
-}
+    background-color: white;
+    color: black;
+  }
+  
 .link-box {
     display: inline-block;
     padding: 10px;
