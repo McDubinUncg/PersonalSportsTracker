@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <head>
-        <link rel="stylesheet" href="style.css">
-      </head>
-      
-    <body>
-       <nav class="w3-bar w3-dark-gray">
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-            <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
-            <a href="#Reviews" class="w3-bar-item w3-button">Reviews</a>
-            <a href="#favorites" class="w3-bar-item w3-button">Favorites</a>
-            <a href="#home" class="w3-bar-item w3-button">Home</a>
-            <a href="user.html" class="w3-bar-item w3-button">USER</a>
-            <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
-            <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
-        </nav>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .team-container, .review-container {
+        width: 48%;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="w3-bar w3-dark-gray">
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
+      <a href="#Reviews" class="w3-bar-item w3-button">Reviews</a>
+      <a href="#favorites" class="w3-bar-item w3-button">Favorites</a>
+      <a href="#home" class="w3-bar-item w3-button">Home</a>
+      <a href="user.html" class="w3-bar-item w3-button">USER</a>
+      <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
+      <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
+    </nav>
+    <div class="wrapper">
+      <div class="team-container">
         <h2>My Favorite Teams</h2>
         <div>
-            <label for = "teamName">Search:</label>
-            <input type = "text" id = "teamName" name="teamName">
-            <button type ="submit">Add Team</button>
-            <button type = "Delete Favorite">Delete Favorite</button>
+          <label for="teamName">Search:</label>
+          <input type="text" id="teamName" name="teamName">
+          <button type="submit">Add Team</button>
+          <button type="Delete Favorite">Delete Favorite</button>
         </div>
         <p>To close/hide the list items, click on the "x":</p>
-  <ul class="w3-ul w3-card-4">
-    <li class="w3-display-container">Atlanta Falcons <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-    <li class="w3-display-container">Charlotte Hornets <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-    <li class="w3-display-container">UCLA <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-</ul>
-        <div class = "w3-display-topright">My Reviews</div>
+        <ul class="w3-ul w3-card-4">
+          <li class="w3-display-container">Atlanta Falcons <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+          <li class="w3-display-container">Charlotte Hornets <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+          <li class="w3-display-container">UCLA <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+        </ul>
+      </div>
+
+      <div class="review-container">
         <h2>My Reviews</h2>
+        <div>
+          <button type="Add Review">Add Review</button>
+          <button type="Delete Review">Delete Review</button>
+        </div>
         <p>To close/hide the reviews, click on the "x":</p>
         <ul class="w3-ul w3-card-4">
-          <li class="w3-display-container">This team is awesome <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-          <li class="w3-display-container">the team last night played well <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-          <li class="w3-display-container">UCLA is the best team <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-      </ul>        <div>
-            <button type = "Add Review">Add Review</button>
-            <button type = "Delete Review">Delete Review</button>
+        <li class="w3-display-container">This team is awesome <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">×</span></li>
+        <li class="w3-display-container">the team last night played well <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">×</span></li>
+        <li class="w3-display-container">UCLA is the best team <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">×</span></li>
+        </ul>
         </div>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        </div>
+

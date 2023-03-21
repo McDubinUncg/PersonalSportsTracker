@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <head>
-        <link rel="stylesheet" href="style.css">
-      </head>
-      
-    <body>
-        <nav class="w3-bar w3-dark-gray">
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-            <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
-            <a href="#Reviews" class="w3-bar-item w3-button">Reviews</a>
-            <a href="#favorites" class="w3-bar-item w3-button">Favorites</a>
-            <a href="#home" class="w3-bar-item w3-button">Home</a>
-            <a href="user.html" class="w3-bar-item w3-button">USER</a>
-            <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
-            <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
-        </nav>
-        <h1>QuickLink</h1>
-        <div>
-            <div class = "link-box">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="w3-bar w3-dark-gray">
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
+        <a href="#Reviews" class="w3-bar-item w3-button">Reviews</a>
+        <a href="#favorites" class="w3-bar-item w3-button">Favorites</a>
+        <a href="#home" class="w3-bar-item w3-button">Home</a>
+        <a href="user.html" class="w3-bar-item w3-button">USER</a>
+        <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
+        <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
+    </nav>
+    <h1>QuickLink</h1>
+    <div class="wrapper">
+        <div class="link-container">
+            <div class="link-box">
                 <h4>Links</h4>
                 <a href="https://www.espn.com/">ESPN</a>
                 <a href="https://github.com/McDubinUncg/PersonalSportsTracker">Github</a>
             </div>
-            <button type ="submit">Add QuickLink</button>
-            <button type ="submit">Remove QuickLink</button>
-            <button type ="submit">Change QuickLink </button>
-            <div><a>REVIEWS</a>
-                <p>To close/hide the reviews items, click on the "x":</p>
-            <ul class="w3-ul w3-card-4">
-              <li class="w3-display-container">This team is awesome <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-              <li class="w3-display-container">the team last night played well <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-              <li class="w3-display-container">UCLA is the best team <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
-          </ul>
+            <div>
+                <button type="submit">Add QuickLink</button>
+                <button type="submit">Remove QuickLink</button>
+                <button type="submit">Change QuickLink </button>
+            </div>
         </div>
-        </div>    
+        <div class="review-container">
+            <h1>Reviews</h1>
+            <p>To close/hide the reviews items, click on the "x":</p>
+            <ul class="w3-ul w3-card-4">
+                <li class="w3-display-container">This team is awesome <span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                <li class="w3-display-container">the team last night played well <span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                <li class="w3-display-container">UCLA is the best team <span
+                        onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-transparent w3-display-right">&times;</span></li>
+            </ul>
+            <div>
+                <button type="submit">Add Review</button>
+                <button type="submit">Delete Review</button>
+            </div>
+        </div>
+    </div>
 
-    </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+</script>
