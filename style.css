@@ -92,12 +92,6 @@ body {
     background-color: #222;
 }
 
-.link-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .wrapper {
     display: flex;
     justify-content: space-between;
