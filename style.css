@@ -94,11 +94,16 @@ body {
 
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  .link-container, .review-container {
+}
+
+.link-container, .review-container {
     width: 48%;
-    margin: 10px;
-  }
-  
+    margin-bottom: 20px;
+}
+
+.review-container {
+    margin-left: auto;
+    margin-right: auto;
+}
