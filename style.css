@@ -14,7 +14,7 @@ img {
     text-decoration: none;
 }
 .w3-bar-item a:hover {
-    background-color: #ddd;
+    background-color: lightgrey;
     color: black;
 }
 .w3-bar-item a.active {
