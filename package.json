@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "download": "^8.0.0",
+    "netlify-identity-widget": "^1.9.2"
+  }
+}
