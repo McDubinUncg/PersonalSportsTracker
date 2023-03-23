@@ -58,3 +58,23 @@ body {
     background-color: white;
     color: black;
 }
+.favorite-teams{
+    margin: 20px;
+}
+.favorite-teams h3{
+    font-size:24px;
+    font-weight: bold;
+}
+.favorite-teams ul{
+    list-style: none;
+    padding: 0;
+}
+.favorite-teams li{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10 px;
+    text-align: center;
+}
