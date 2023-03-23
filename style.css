@@ -1,7 +1,7 @@
 img {
     width: 100%;
     height: auto;
-    opacity: 0.5;
+
 }
 .w3-bar-item {
     float: right;
@@ -56,13 +56,9 @@ img {
     color: black;
 }
 body {
-    background-image: url("assets/16694129388697.jpg"), url("assets/960x0.jpg"), url("assets/pic.webp");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-attachment: fixed, fixed, fixed;
-    background-size: cover, cover, cover;
-    background-color: transparent;
-  }
-  
+    background-color: lightgrey;
+    color: black;
+}
 .favorite-teams{
     margin: 20px;
 }
