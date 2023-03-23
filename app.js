@@ -6,3 +6,13 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=8845aff61b5844de9a
     document.getElementById('headline').textContent = headline;
   })
   .catch(error => console.error(error));
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/user.html";
+      });
+    }
+  });
+}
