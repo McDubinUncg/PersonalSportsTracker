@@ -19,15 +19,10 @@ if (window.netlifyIdentity) {
   });
 }
 
-// Login modal
-const loginBtn = document.getElementById('login-btn');
-const loginModal = document.getElementById('login-modal');
-const closeBtn = document.querySelector('.w3-modal-content span');
-
-loginBtn.addEventListener('click', () => {
-  loginModal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', () => {
-  loginModal.style.display = 'none';
+$(document).ready(function(){
+  $('.slideshow').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
 });

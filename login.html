@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="app.js"></script>
 </head>
+
 <body>
   <nav class="w3-bar w3-dark-gray">
     <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button" id="loginBtn"><i class="fas fa-user"></i></a>
+    <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
     <a href="reviews.html" class="w3-bar-item w3-button">Reviews</a>
     <a href="favorites.html" class="w3-bar-item w3-button">Favorites</a>
     <a href="home.html" class="w3-bar-item w3-button">Home</a>
@@ -17,36 +25,8 @@
     <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
     <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
   </nav>
-
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Login</h2>
-      <form>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="app.js"></script>
-  <script>
-    var modal = document.getElementById("loginModal");
-    var btn = document.getElementById("loginBtn");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  </nav>
+  <button onclick="window.netlifyIdentity.open('login')">Log in</button>
+  <button onclick="window.netlifyIdentity.open('signup')">Sign up</button>
 </body>
 </html>
