@@ -2,6 +2,12 @@
 <html>
 
 <head>
+    <header class = "page-banner">
+        <div class = "banner-text">
+            <h1>Welcome User</h1>
+            <p>Here you can find information about your favorite teams</p>
+        </div>
+    </header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
@@ -36,12 +42,12 @@
     </nav>
     <div class="wrapper">
         <div class="team-container">
-            <h2>My Favorite Teams</h2>
+            <h2>Search for Favorite Teams</h2>
             <div>
                 <label for="teamName">Search:</label>
                 <input type="text" id="teamName" name="teamName">
                 <button type="submit">Add Team</button>
-                <button type="Delete Favorite">Delete Favorite</button>
+                <button type="Delete Favorite">Delete Team</button>
             </div>
             <p>To close/hide the list items, click on the "x":</p>
             <ul class="w3-ul w3-card-4">
@@ -56,28 +62,14 @@
         </div>
 
         <div class="review-container">
-            <h2>My Reviews</h2>
+            <h2>My Thread</h2>
             <div>
-                <button type="Add Review">Add Review</button>
-                <button type="Delete Review">Delete Review</button>
             </div>
-            <p>To close/hide the reviews, click on the "x":</p>
-            <ul class="w3-ul w3-card-4">
-                <li class="w3-display-container">This team is awesome <span
-                        onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right">×</span></li>
-                <li class="w3-display-container">the team last night played well <span
-                        onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right">×</span></li>
-                <li class="w3-display-container">UCLA is the best team <span
-                        onclick="this.parentElement.style.display='none'"
-                        class="w3-button w3-transparent w3-display-right">×</span></li>
-            </ul>
         </div>
-        <div class="favorite-teams">
-            <h3>Favorite Teams</h3>
-            <ul>
-                <li>Carolina Tarheels</li>
+        <div class="user-banner">
+            <h3>My Favorite Teams</h3>
+            <ul id = "team-list"></ul>
+                <li>North Carolina Tarheels</li>
                 <li>UNCG Spartans</li>
                 <li>St Louis Cardinals</li>
             </ul>

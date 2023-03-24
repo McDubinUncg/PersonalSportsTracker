@@ -59,23 +59,49 @@ body {
     background-color: lightgrey;
     color: black;
 }
-.favorite-teams{
-    margin: 20px;
+
+.user-banner{
+    background-color: #F5F5F5;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
 }
-.favorite-teams h3{
-    font-size:24px;
+.user-banner h2{
+    font-size: 18px;
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
-.favorite-teams ul{
+#team-list{
     list-style: none;
+    margin: 0;
     padding: 0;
 }
-.favorite-teams li{
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-    padding: 10 px;
+#team-list{
+    display:inline-block;
+    margin-right: 10px;
+}
+#team-list{
+    height: 30px;;
+    width: 30px;
+    margin-right: 5px;
+}
+.page-banner{
+    background-color: #333;
+    color: #FFF;
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
 }
+.banner-text{
+    max-width: 800px;
+    margin: 0 auto;
+ }
+ .banner-text h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+ }
+ .banner-text p{
+    font-size: 18px;
+    margin-bottom: 0;
+ }
