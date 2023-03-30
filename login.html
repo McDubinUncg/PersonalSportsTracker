@@ -4,29 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  <title>Login</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="app.js"></script>
 </head>
 
 <body>
-  <nav class="w3-bar w3-dark-gray">
-    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
-    <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
-    <a href="reviews.html" class="w3-bar-item w3-button">Reviews</a>
-    <a href="favorites.html" class="w3-bar-item w3-button">Favorites</a>
-    <a href="home.html" class="w3-bar-item w3-button">Home</a>
-    <a href="user.html" class="w3-bar-item w3-button">USER</a>
-    <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
-    <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Personal Sports Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="threads.html">Threads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fas fa-user"></i></a>
+        </li>
+      </ul>
+    </div>
   </nav>
-  </nav>
-  <button onclick="window.netlifyIdentity.open('login')">Log in</button>
-  <button onclick="window.netlifyIdentity.open('signup')">Sign up</button>
-</body>
-</html>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" onclick="window.netlifyIdentity.open('login')">Log in</button>
+        <button class="btn btn-secondary" onclick="window.netlifyIdentity.open('signup')">Sign up</button>
+      </div>
+    </div>
+  </div>

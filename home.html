@@ -1,39 +1,116 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .team-container,
+        .review-container {
+            width: 48%;
+        }
+
+        .w3-ul {
+            list-style: none;
+            padding-left: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="headline"></div>
-    <nav class="w3-bar w3-dark-gray">
-        <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
-        <a href="login.html" class="w3-bar-item w3-button"><i class="fas fa-user"></i></a>
-        <a href="reviews.html" class="w3-bar-item w3-button">Reviews</a>
-        <a href="favorites.html" class="w3-bar-item w3-button">Favorites</a>
-        <a href="home.html" class="w3-bar-item w3-button">Home</a>
-        <a href="user.html" class="w3-bar-item w3-button">USER</a>
-        <a href="moderator.html" class="w3-bar-item w3-button">MODERATOR</a>
-        <a href="admin.html" class="w3-bar-item w3-button">ADMIN</a>
-    </nav>
-    <section>
-        <div class="slideshow">
-            <div><img src="/assets/pic.webp"></div>
-            <div><img src="/assets/16694129388697.jpg"></div>
-            <div><img src="/assets/960x0.jpg"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Personal Sports Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="threads.html">Threads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
         </div>
-    </section>
+    </nav>
+    <div class="container-left" style="margin-left: 20px;">
+        <div class="row">
+            <div id="favorites" class="col-md-3">
+                <h2 class="text-center">Favorite Teams</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Team 1</li>
+                    <li class="list-group-item">Team 2</li>
+                    <li class="list-group-item">Team 3</li>
+                    <li class="list-group-item">Team 4</li>
+                    <li class="list-group-item">Team 4</li>
+                    <li class="list-group-item">Team 4</li>
+                    <li class="list-group-item">Team 4</li>
+                    <li class="list-group-item">Team 4</li>
+                    <li class="list-group-item">Team 4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div id="myCarousel" class="col-md-9" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="assets\960x0.jpg" alt="Slide 1">
+                    <div class="carousel-caption">
+                        <h3>Slide 1</h3>
+                        <p>Some description about slide 1.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets\pic.webp" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <h3>Slide 2</h3>
+                        <p>Some description about slide 2.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets\16694129388697.jpg" alt="Slide 3">
+                    <div class="carousel-caption">
+                        <h3>Slide 3</h3>
+                        <p>Some description about slide 3.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 </body>
+
 </html>

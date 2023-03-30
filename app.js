@@ -1,4 +1,3 @@
-// Netlify Identity configuration
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
@@ -9,10 +8,3 @@ if (window.netlifyIdentity) {
   });
 }
 
-$(document).ready(function(){
-  $('.slideshow').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
-});
