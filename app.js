@@ -2,7 +2,7 @@ const exphbs = require('express-handlebars')
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use('/static',express.static(path.join(__dirname, 'static')))
 
@@ -25,3 +25,5 @@ app.get('/login', (req, res) => {
 });
 
 app.listen(port)
+
+
