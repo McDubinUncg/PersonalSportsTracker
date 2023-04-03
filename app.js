@@ -23,7 +23,4 @@ app.get('/threads', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login');
 });
-
 app.listen(port)
-
-

@@ -1,28 +1,9 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/home.html";
-      });
-    }
-  });
-}
-
 const supabaseUrl = "https://iujbfqjzhlvhvgmhtirj.supabase.co"
 const supabseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1amJmcWp6aGx2aHZnbWh0aXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA1Mzk5MjksImV4cCI6MTk5NjExNTkyOX0.tPY7ueHWHgU9GoPuShRc4evIoyK9P6XXN0BEIeYNzYI"
 const hyperlinkbox = document.querySelector('#hyperlink-box')
 hyperlinkbox.innerHTML = ''
-
-async function addHyperlink(name, url) {
-  const { data, error } = await supabase.from('hyperlinks').insert({ name, url })
-  if (error) {
-    console.log(error)
-    return
-  }
-  renderHyperlinks()
-}
 
 async function renderHyperlinks() {
   const { data, error } = await supabase.from('hyperlinks').select('*')
@@ -60,11 +41,31 @@ async function renderHyperlinks() {
     hyperlinkbox.appendChild(listItem)
   })
 }
-
 const supabase = createClient(supabaseUrl, supabseKey)
 
-renderHyperlinks()
+const { data, error } = await supabase
+  .from('hyperlinks')
+  .select()
 
+console.log(error,data)
+
+
+
+
+
+
+
+
+/*
+async function addHyperlink(name, url) {
+  const { data, error } = await supabase.from('hyperlinks').insert({ name, url })
+  if (error) {
+    console.log(error)
+    return
+  }
+  renderHyperlinks()
+}
+*/
 /*
 const editButton = document.createElement('button')
 editButton.textContent = 'Edit'
