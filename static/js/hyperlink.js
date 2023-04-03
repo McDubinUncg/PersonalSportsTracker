@@ -1,8 +1,8 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+window.addEventListener('load', function() {
 
 const supabaseUrl = "https://iujbfqjzhlvhvgmhtirj.supabase.co"
 const supabseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1amJmcWp6aGx2aHZnbWh0aXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA1Mzk5MjksImV4cCI6MTk5NjExNTkyOX0.tPY7ueHWHgU9GoPuShRc4evIoyK9P6XXN0BEIeYNzYI"
-const hyperlinkbox = document.querySelector('#hyperlink-box')
 const supabase = createClient(supabaseUrl, supabseKey)
 
 const container = document.getElementById("yourmom")
@@ -21,6 +21,7 @@ async function getData() {
   })
 }
 getData()
+})
 
 
 
