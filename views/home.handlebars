@@ -1,0 +1,45 @@
+<div class="container-left" style="margin-left: 20px;">
+  <div class="row">
+    <div id="favorites" class="col-md-3">
+      <h2 class="text-center">Favorite Teams</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Team 1</li>
+        <li class="list-group-item">Team 2</li>
+        <li class="list-group-item">Team 3</li>
+        <li class="list-group-item">Team 4</li>
+        <li class="list-group-item">Team 4</li>
+        <li class="list-group-item">Team 4</li>
+        <li class="list-group-item">Team 4</li>
+        <li class="list-group-item">Team 4</li>
+        <li class="list-group-item">Team 4</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <button id="secret-button" style="display:none;">Secret Button</button>
+
+<div class="container-right" style="margin-right: 20px;">
+  <div class="container">
+    <div id="hyperlink-box">
+      <div id="favorites" class="col-md-3">
+        <h2 class="text-center">Links</h2>
+        <ul class="list-group">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/static/js/main.js" type="module"></script>
+<script>
+      async function checkAuth() {
+        const response = await fetch('/.netlify/functions/auth', {
+          method: 'POST',
+        });
+        const data = await response.json();
+        if (data.user) {
+          document.getElementById('secret-button').style.display = 'block';
+        }
+      }
+
+      checkAuth();
+    </script>
