@@ -1,16 +1,48 @@
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+ <script src="/static/js/favorites.js"></script>
+
+<style>
+       .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+      .team-container,
+      .review-container {
+            width: 48%;
+        }
+
+        .w3-ul {
+            list-style: none;
+            padding-left: 0;
+        }
+         .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .textButton {
+            border: none;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+</style>
+   
+
 <div class="container-left" style="margin-left: 20px;">
-  <div class="row">
-    <div id="favorites" class="col-md-3">
-      <h3 class="text-center">Favorite Teams</h3>
-      <ul class="list-group">
-        <li class="list-group-item">Team 1</li>
-        <li class="list-group-item">Team 2</li>
-        <li class="list-group-item">Team 3</li>
-        <li class="list-group-item">Team 4</li>
-      </ul>
+        <div class="row">
+            <div id="favorites" class="col-md-3">
+                <h2 class="text-center">Favorite Teams</h2>
+                <input type="text" id="searchBar" />
+                <button type="button" id="searchButton">Search</button>
+                <ul class="list-group" id="team-list"></ul>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 <div class="container-right  float-right" id="hyperlink-box">
   <div id="links" class="col-md-2">
     <h3 class="text-center">Links</h3>
