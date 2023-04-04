@@ -15,13 +15,30 @@ async function getData() {
   console.log(data)
 
   data.forEach(item => {
-    const items = document.createElement("li")
-    items.textContent = item.name
-    container.appendChild(items)
+    const link =document.createElement("a")
+    link.href = item.url
+    link.textContent = item.name
+    container.appendChild(link)
   })
 }
 getData()
+
+async function removeData(){
+  const { error } = await supabase
+  .from('hyperlinks')
+  .delete()
+  .eq('id', linkId)
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete Link';
+  deleteButton.addEventListener('click', async () => {
+await removeData(linkId)
+});
+document.getElementById('yourmom').appendChild(deleteButton);
+}
 })
+
+
 
 
 

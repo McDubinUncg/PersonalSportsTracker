@@ -1,0 +1,19 @@
+# fly.toml file generated for pst on 2023-04-03T19:34:14-04:00
+
+app = "pst"
+primary_region = "iad"
+
+[env]
+  PORT = "8080"
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
+    force_https = true
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
