@@ -17,3 +17,8 @@ body {
 .container-right {
     margin-left: 2%;
 }
+
+.list-group-item a{
+    display: block;
+    padding: 10px;
+}

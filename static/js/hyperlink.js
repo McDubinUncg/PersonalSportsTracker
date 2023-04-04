@@ -1,97 +1,50 @@
+//imports create client
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-window.addEventListener('load', function() {
+//waiting for the page to load to run the function
+window.addEventListener('load', function () {
 
-const supabaseUrl = "https://iujbfqjzhlvhvgmhtirj.supabase.co"
-const supabseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1amJmcWp6aGx2aHZnbWh0aXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA1Mzk5MjksImV4cCI6MTk5NjExNTkyOX0.tPY7ueHWHgU9GoPuShRc4evIoyK9P6XXN0BEIeYNzYI"
-const supabase = createClient(supabaseUrl, supabseKey)
+//defines url and key then creates supabase object 
+  const supabaseUrl = "https://iujbfqjzhlvhvgmhtirj.supabase.co"
+  const supabseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml1amJmcWp6aGx2aHZnbWh0aXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA1Mzk5MjksImV4cCI6MTk5NjExNTkyOX0.tPY7ueHWHgU9GoPuShRc4evIoyK9P6XXN0BEIeYNzYI"
+  const supabase = createClient(supabaseUrl, supabseKey)
 
-const container = document.getElementById("yourmom")
+//gets reference from html
+  const container = document.getElementById("yourmom")
 
-async function getData() {
-  const { data, error } = await supabase
-    .from('hyperlinks')
-    .select()
+//functinon to get the data provided from supabse
+  async function getData() {
+    const { data, error } = await supabase
+      .from('hyperlinks')
+      .select('*')
 
-  console.log(data)
+    console.log(data, error)
 
-  data.forEach(item => {
-    const link =document.createElement("a")
-    link.href = item.url
-    link.textContent = item.name
-    container.appendChild(link)
-  })
-}
-getData()
+//iterates over the data array 
+    data.forEach(item => {
+  
+//creates link from the url in table then adds to container
+      const link = document.createElement("a")
+      link.href = item.url
+      link.textContent = item.name
+      container.appendChild(link)
 
-async function removeData(){
-  const { error } = await supabase
-  .from('hyperlinks')
-  .delete()
-  .eq('id', linkId)
+//creates a remove button with event listener to remove the links from the table
+      const removeButton = document.createElement("button")
+      removeButton.textContent = "Remove"
+      removeButton.addEventListener("click", async () => {
+        const { data: removedData, error: removedError } = await supabase
+          .from('hyperlinks')
+          .delete()
+          .eq('id', item.id)
+        if (removedData) {
+          container.removeChild(link)
+          container.removeChild(removeButton)
+        }
+      })
+      container.appendChild(removeButton)
+    })
+  
+  }
+  getData()
 
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Delete Link';
-  deleteButton.addEventListener('click', async () => {
-await removeData(linkId)
-});
-document.getElementById('yourmom').appendChild(deleteButton);
-}
 })
-
-
-
-
-
-
-
-
-
-/*
-async function addHyperlink(name, url) {
-const { data, error } = await supabase.from('hyperlinks').insert({ name, url })
-if (error) {
-console.log(error)
-return
-}
-renderHyperlinks()
-}
-*/
-/*
-const editButton = document.createElement('button')
-editButton.textContent = 'Edit'
-editButton.addEventListener('click', () => {
-const editModal = document.querySelector('#edit-modal')
-const editNameInput = document.querySelector('#edit-name')
-const editUrlInput = document.querySelector('#edit-url')
-const currentLinkId = editButton.parentNode.getAttribute('data-link-id')
-editNameInput.value = editButton.parentNode.querySelector('a').textContent
-editUrlInput.value = editButton.parentNode.querySelector('a').getAttribute('href')
-const saveChangesButton = editModal.querySelector('#save-changes')
-saveChangesButton.addEventListener('click', async () => {
-const updatedName = editNameInput.value
-const updatedUrl = editUrlInput.value
-const { data, error } = await supabase
-.from('hyperlinks')
-.update({ name: updatedName, url: updatedUrl })
-.eq('id', currentLinkId)
-if (error) {
-console.log(error)
-return
-}
-renderHyperlinks()
-$('#edit-modal').modal('hide')
-})
-$('#edit-modal').modal('show')
-})
-
-const addLinkButton = document.querySelector('#add-link')
-addLinkButton.addEventListener('click', async () => {
-const addNameInput = document.querySelector('#add-name')
-const addUrlInput = document.querySelector('#add-url')
-const name = addNameInput.value
-const url = addUrlInput.value
-await addHyperlink(name, url)
-$('#add-modal').modal('hide')
-})
-*/
-
